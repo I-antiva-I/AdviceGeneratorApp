@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="./css/styles_variables.css">
+  <link rel="stylesheet" href="./css/styles_main.css">
+
+  <!--JS-->
+  <script src="./javascript/core.js"></script>
+  
+  <title>Frontend Mentor | Advice generator app</title>
+
+
+</head>
+<body>
+
+  <main>
+    <div class="advice-box">
+      <h1>ADVICE #<span id="advice-id">117</span></h1>
+      <p id="advice-content">
+        It is easy to sit up and take notice, what's difficult is getting up and taking action.
+      </p>
+      <img class="divider mobile"  src="./images/pattern-divider-mobile.svg"  alt="Divider">
+      <img class="divider desktop" src="./images/pattern-divider-desktop.svg" alt="Divider">
+      <button class="dice" onclick="fetchAdvice()">
+        <img src="./images/icon-dice-5.svg" id="dice-icon" alt="Dice">
+      </button>
+    </div>
+  </main>
+
+</body>
+
+<script>
+  // fetchAdvice();
+  // showAdvice({id: "117", advice: "It is easy to sit up and take notice, what's difficult is getting up and taking action."});
+</script>
+
+
+</html>

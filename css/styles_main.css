@@ -1,0 +1,138 @@
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope";
+
+}
+
+
+body
+{
+    min-height: 100vh;
+    background-color: var(--color-dark-blue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.advice-box
+{
+    background-color: var(--color-dark-grayish-blue);
+    color: var(--color-light-cyan);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: var(--width-mobile);
+    border-radius: 0.5rem;
+
+    position: relative;
+
+    padding-inline:     1.75rem;
+    padding-top:        2.75rem;
+}
+
+
+h1, h1 span
+{
+    font-size: 0.75rem;
+    color: var(--color-neon-green);
+    letter-spacing: 4px;
+}
+
+
+p
+{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 800;
+
+}
+p::before
+{
+    content: open-quote;
+    font-weight: 400;
+}
+p::after
+{
+    content: close-quote;
+    font-weight: 400;
+}
+
+
+.desktop
+{
+    display: none;
+}
+
+.divider
+{
+    margin-bottom: calc(2rem + var(--button-diameter)*0.5);
+}
+
+button.dice
+{
+    width:      var(--button-diameter);
+    height:     var(--button-diameter);
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--color-neon-green);
+
+    position: absolute;
+    top: calc(100% - var(--button-diameter)*0.5 );
+    left: calc(50% - var(--button-diameter)*0.5 );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: box-shadow 0.25s;
+}
+button.dice:hover
+{
+    box-shadow: 
+        var(--color-neon-green) 0px 0px 12px 0px;
+}
+button.dice:active
+{
+    background-color: var(--color-light-cyan);
+
+}
+
+
+@media screen and (min-width: 900px) 
+{
+    .advice-box
+    {
+        width: var(--width-desktop);
+        max-width: var(--width-desktop);
+    }
+    p
+    {
+        font-size: var(--font-size-advice);
+    }
+    .desktop
+    {
+        display: block;
+    }
+    .mobile
+    {
+        display: none;
+    }
+
+}
+
+
